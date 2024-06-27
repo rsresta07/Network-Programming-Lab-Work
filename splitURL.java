@@ -2,7 +2,7 @@ import java.net.URL;
 
 public class splitURL {
     public static void main(String[] args) {
-        String url = "https://www.youtube.com/";
+        String url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
         try {
             URL url1 = new URL(url);
             System.out.println("Protocol: " + url1.getProtocol());
