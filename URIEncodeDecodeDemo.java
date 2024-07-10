@@ -1,3 +1,7 @@
+/* 
+ * WAP to Encoding and Decoding of URI
+*/
+
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 

@@ -1,3 +1,7 @@
+/*
+ * WAP to print the HTTP header.
+ */
+
 import java.io.IOException;
 import java.net.URL;
 import java.net.URLConnection;

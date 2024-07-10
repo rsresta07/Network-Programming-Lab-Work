@@ -1,3 +1,6 @@
+/*
+ * WAP to download a page from server using URL connection class.
+ */
 
 import java.io.*;
 import java.net.*;

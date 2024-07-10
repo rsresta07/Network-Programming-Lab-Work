@@ -1,3 +1,7 @@
+/*
+ * Write a code to demonstrate the Authenticator class. Password authenticator class and the JpasswordField class.
+ */
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

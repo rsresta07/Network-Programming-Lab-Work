@@ -1,3 +1,7 @@
+/*
+ * WAP to demonstrate authenticator class.
+*/
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.Authenticator;
@@ -23,7 +27,7 @@ public class AuthenticatorDemo {
 
             URL url = new URL("https://httpbin.org/basic-auth/user/pass");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            log.info("Connection established...");
+            log.info("Connection established!");
 
             conn.setRequestMethod("GET");
             System.out.println("Response Code: " + conn.getResponseCode());
