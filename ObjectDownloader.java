@@ -1,5 +1,3 @@
-//FIXME: This is wrong code i think
-
 // WAP to download an object.
 
 import java.io.BufferedInputStream;
