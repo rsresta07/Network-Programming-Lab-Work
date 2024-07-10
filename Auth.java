@@ -3,7 +3,6 @@
  */
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -23,10 +22,8 @@ public class Auth {
         JLabel emailLabel = new JLabel("Email");
         JLabel passwordLabel = new JLabel("Password");
 
-        JTextField emailField = new JTextField();
-        JPasswordField passwordField = new JPasswordField();
-        emailField.setPreferredSize(new Dimension(200, 30));
-        passwordField.setPreferredSize(new Dimension(200, 30));
+        JTextField emailField = new JTextField(10);
+        JPasswordField passwordField = new JPasswordField(10);
 
         JButton btn = new JButton("Submit");
 
