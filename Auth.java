@@ -12,6 +12,7 @@ import java.net.PasswordAuthentication;
 import java.net.URL;
 import java.util.logging.Logger;
 
+
 public class Auth {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Authenticator");
