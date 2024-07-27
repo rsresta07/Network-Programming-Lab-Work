@@ -1,15 +1,20 @@
-// 192.168.1.184
 package ClientServer;
 
 import java.io.*;
 import java.net.*;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Client {
+    // Create a logger instance
+    private static final Logger logger = Logger.getLogger(Client.class.getName());
+
     public static void main(String[] args) {
         try {
             // Replace "server_ip_address" with the actual IP address of the server computer
-            String serverIpAddress = "192.168.1.184";
+            String serverIpAddress = "localhost";
+            logger.info("Connecting to server at " + serverIpAddress + ":9999\n");
             Socket socket = new Socket(serverIpAddress, 9999);
 
             // Create input and output streams
@@ -33,12 +38,13 @@ public class Client {
             }
 
             // Close the streams and socket
+            logger.info("Closing connections");
             input.close();
             output.close();
             socket.close();
             scanner.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.log(Level.SEVERE, "IOException occurred", e);
         }
     }
 }

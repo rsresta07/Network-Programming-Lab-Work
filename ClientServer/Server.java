@@ -2,17 +2,22 @@ package ClientServer;
 
 import java.io.*;
 import java.net.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Server {
+    // Create a logger instance
+    private static final Logger logger = Logger.getLogger(Server.class.getName());
+
     public static void main(String[] args) {
         try {
             // Create a server socket
             ServerSocket serverSocket = new ServerSocket(9999);
-            System.out.println("Server started and listening on port...");
+            logger.info("Server started and listening on port 9999\n");
 
             // Wait for a client connection
             Socket socket = serverSocket.accept();
-            System.out.println("Client connected");
+            logger.info("Client connected\n");
 
             // Create input and output streams
             DataInputStream input = new DataInputStream(socket.getInputStream());
@@ -35,12 +40,13 @@ public class Server {
             }
 
             // Close the streams and socket
+            logger.info("Closing connections");
             input.close();
             output.close();
             socket.close();
             serverSocket.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.log(Level.SEVERE, "IOException occurred", e);
         }
     }
 }
