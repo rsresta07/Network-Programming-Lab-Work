@@ -6,10 +6,9 @@ public class SocketInfo {
 
     public static void main(String[] args) {
         String host = "www.example.com";
-        int port = 80;
 
         try {
-            Socket socket = new Socket(host, port);
+            Socket socket = new Socket(host, 80);
 
             logger.info("\nConnected to: " + socket.getInetAddress());
             System.out.println("Port: " + socket.getPort());
