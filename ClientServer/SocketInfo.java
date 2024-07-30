@@ -1,3 +1,5 @@
+package ClientServer;
+
 import java.net.*;
 import java.util.logging.*;
 
@@ -6,10 +8,9 @@ public class SocketInfo {
 
     public static void main(String[] args) {
         String host = "www.example.com";
-        int port = 80;
 
         try {
-            Socket socket = new Socket(host, port);
+            Socket socket = new Socket(host, 80);
 
             logger.info("\nConnected to: " + socket.getInetAddress());
             System.out.println("Port: " + socket.getPort());
@@ -18,21 +19,21 @@ public class SocketInfo {
             System.out.println("Timeout: " + socket.getSoTimeout() + " milliseconds");
 
             if (socket.isConnected()) {
-                System.out.println("Socket is connected.");
+                System.out.println("connected.");
             } else {
-                System.out.println("Socket is not connected.");
+                System.out.println("not connected.");
             }
 
             if (socket.isBound()) {
-                System.out.println("Socket is bound to local address and port.");
+                System.out.println("bound to local address and port.");
             } else {
-                System.out.println("Socket is not bound.");
+                System.out.println("not bound.");
             }
 
             if (socket.isClosed()) {
-                System.out.println("Socket is closed.");
+                System.out.println("closed.");
             } else {
-                System.out.println("Socket is open and ready to use.");
+                System.out.println("open and ready to use.");
             }
 
             socket.close();
