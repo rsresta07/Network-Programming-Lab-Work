@@ -7,7 +7,7 @@ public class SocketInfo {
     private static final Logger logger = Logger.getLogger(SocketInfo.class.getName());
 
     public static void main(String[] args) {
-        String host = "www.example.com";
+        String host = "www.youtube.com";
 
         try {
             Socket socket = new Socket(host, 80);
