@@ -1,4 +1,5 @@
-package ClientServer;
+package Sockets;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.util.logging.Level;
@@ -10,7 +11,7 @@ public class ServerSocketInfo {
     public static void main(String[] args) {
         ServerSocket serverSocket = null;
         try {
-            int port = 8080; 
+            int port = 8080;
             serverSocket = new ServerSocket(port);
 
             LOGGER.info("\nServerSocket information:");
@@ -19,15 +20,15 @@ public class ServerSocketInfo {
             System.out.println("Is closed: " + serverSocket.isClosed());
         } catch (IOException e) {
             LOGGER.log(Level.SEVERE, "Error creating ServerSocket", e);
-        } 
+        }
         // finally {
-        //     if (serverSocket != null && !serverSocket.isClosed()) {
-        //         try {
-        //             serverSocket.close();
-        //         } catch (IOException e) {
-        //             LOGGER.log(Level.SEVERE, "Error closing ServerSocket", e);
-        //         }
-        //     }
+        // if (serverSocket != null && !serverSocket.isClosed()) {
+        // try {
+        // serverSocket.close();
+        // } catch (IOException e) {
+        // LOGGER.log(Level.SEVERE, "Error closing ServerSocket", e);
+        // }
+        // }
         // }
     }
 }
