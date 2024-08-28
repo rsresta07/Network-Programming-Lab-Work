@@ -1,13 +1,13 @@
-package ClientServer;
+package TCPClientServer;
 
 import java.io.*;
 import java.net.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Server {
+public class TCPServer {
     // Create a logger instance
-    private static final Logger logger = Logger.getLogger(Server.class.getName());
+    private static final Logger logger = Logger.getLogger(TCPServer.class.getName());
 
     public static void main(String[] args) {
         try {

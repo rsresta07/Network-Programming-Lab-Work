@@ -1,4 +1,4 @@
-package ClientServer;
+package TCPClientServer;
 
 import java.io.*;
 import java.net.*;
@@ -6,9 +6,9 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Client {
+public class TCPClient {
     // Create a logger instance
-    private static final Logger logger = Logger.getLogger(Client.class.getName());
+    private static final Logger logger = Logger.getLogger(TCPClient.class.getName());
 
     public static void main(String[] args) {
         try {
