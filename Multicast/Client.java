@@ -15,7 +15,7 @@ public class Client {
             MulticastSocket socket = new MulticastSocket(port);
             socket.joinGroup(group);
 
-            System.out.println("Joined multicast group, waiting for messages...");
+            System.out.println("Joined multicast group");
 
             byte[] buffer = new byte[256];
             DatagramPacket packet = new DatagramPacket(buffer, buffer.length);

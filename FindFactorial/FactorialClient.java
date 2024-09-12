@@ -16,9 +16,9 @@ public class FactorialClient {
             BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
 
             System.out.print("Enter number: ");
-            String number = userInput.readLine();
+            String num = userInput.readLine();
 
-            writer.println(number);
+            writer.println(num);
 
             String factorial = reader.readLine();
             System.out.println("Factorial is: " + factorial);

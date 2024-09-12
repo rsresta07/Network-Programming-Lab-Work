@@ -20,7 +20,7 @@ public class Server {
             DatagramPacket packet = new DatagramPacket(buffer, buffer.length, group, port);
             socket.send(packet);
 
-            System.out.println("Message sent to multicast group: " + multicastMessage);
+            System.out.println("Message: " + multicastMessage);
 
             socket.close();
         } catch (IOException e) {
